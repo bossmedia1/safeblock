@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Crypto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="deposit-section">
+        <h2>Deposit Crypto</h2>
+        <form id="deposit-form">
+            <label for="crypto">Select Cryptocurrency:</label>
+            <select id="crypto" name="crypto">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="ETH">Ethereum (ETH)</option>
+                <option value="USDT">Tether (USDT)</option>
+            </select>
+
+            <label for="amount">Enter Amount (USD):</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <button type="submit">Generate Payment Address</button>
+        </form>
+
+        <div id="payment-info" style="display: none;">
+            <h3>Send Payment to:</h3>
+            <p id="wallet-address"></p>
+            <img id="qr-code" src="" alt="QR Code">
+        </div>
+    </section>
+
+    <script src="js/payment.js"></script>
+</body>
+</html>
